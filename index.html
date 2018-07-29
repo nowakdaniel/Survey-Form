@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Custom Survey Form">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom Survey Form</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <h1 id="title" class="center">FreeCodeCamp Example Survey Form</h1>
+    <div id="survey-form">
+        <p id="description" class="center">Help us improve FreeCodeCamp!</p>
+        <div>
+            <!-- name -->
+            <form id="survey">
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="name" id="name-label">Enter your name:</label>
+                    </div>
+                    <div class="form">
+                        <input type="text" id="name" name="name" placeholder="Enter your name" autofocus required>
+                    </div>
+                </div>
+                <!-- email -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="email" id="email-label">Enter your e-mail:</label>
+                    </div>
+                    <div class="form">
+                        <input type="email" id="email" name="email" placeholder="Enter your e-mail address" required>
+                    </div>
+                </div>
+                <!-- date -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="pickdate">Enter date of your birth:</label>
+                    </div>
+                    <div class="form">
+                        <input type="date" id="pickdate" name="pickdate" required>
+                    </div>
+                </div>
+                <!-- dropdown -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="dropdown">Enter date of your birth:</label>
+                    </div>
+                    <div class="form">
+                        <select name="dropdown" id="dropdown">
+                            <option value="friend">From a friend</option>
+                            <option value="search-engine">From a search engine</option>
+                            <option value="articles">Articles and publications</option>
+                            <option value="other">Other...</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- weekly -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="number" id="number-label">How much time would you spend learning weekly? (hours)</label>
+                    </div>
+                    <div class="form">
+                        <input type="number" id="number" name="number" placeholder="[1-40]" min="1" max="40" required>
+                    </div>
+                </div>
+                <!-- radio -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label>Are both quality and learning pace appropriate for you?</label>
+                    </div>
+                    <div class="form" id="radio-inputs">
+                        <label for="radio-1">
+                            <input type="radio" id="radio-1" name="radio">
+                            <strong>1</strong> - definitely not - I would choose another learning path.
+                        </label>
+                        <label for="radio-2">
+                            <input type="radio" id="radio-2" name="radio">
+                            <strong>2</strong> - rather not - there are many things to improve.
+                        </label>
+                        <label for="radio-3">
+                            <input type="radio" id="radio-3" name="radio">
+                            <strong>3</strong> - neither good, nor bad - it's okay.
+                        </label>
+                        <label for="radio-4">
+                            <input type="radio" id="radio-4" name="radio">
+                            <strong>4</strong> - rather yes - for its simplicity and affordability.
+                        </label>
+                        <label for="radio-5">
+                            <input type="radio" id="radio-5" name="radio">
+                            <strong>5</strong> - definitely yes - I'll be an evangelist!.
+                        </label>
+                    </div>
+                </div>
+                <!-- chkbx -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label>How much time would you spend learning weekly?</label>
+                    </div>
+                    <div class="form" id="checkbox">
+                        <label for="check-1">
+                            <input type="checkbox" id="check-1" name="checkbox" value="vue"> Vue.js
+                        </label>
+                        <label for="check-2">
+                            <input type="checkbox" id="check-2" name="checkbox" value="angular"> Angular
+                        </label>
+                        <label for="check-3">
+                            <input type="checkbox" id="check-3" name="checkbox" value="oocss"> OOCSS
+                        </label>
+                        <label for="check-4">
+                            <input type="checkbox" id="check-4" name="checkbox" value="cms"> Content Management Systems
+                        </label>
+                        <label for="check-5">
+                            <input type="checkbox" id="check-5" name="checkbox" value="php"> PHP
+                        </label>
+                        <label for="check-6">
+                            <input type="checkbox" id="check-6" name="checkbox" value="vanilla"> Vanilla.js
+                        </label>
+                    </div>
+                </div>
+                <!-- textarea -->
+                <div class="survey-item">
+                    <div class="label">
+                        <label for="textarea">What else could we improve?</label>
+                    </div>
+                    <div class="form">
+                        <textarea id="textarea" rows="4" cols="50" placeholder="Tell us here!"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button type="reset" form="survey" value="Reset">Reset</button>
+        <button type="submit" form="survey" value="Submit">Submit</button>
+    </div>
+    <p class="center"><strong>Note: </strong>this form is not collecting any personal data. It's made only for exercise purposes.</p>
+</body>
+</html>
