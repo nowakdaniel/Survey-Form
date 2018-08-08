@@ -4,106 +4,85 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Custom Survey Form">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Custom Survey Form</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 </head>
 
 <body>
-    <h1 id="title" class="center">FreeCodeCamp Example Survey Form</h1>
-    <!-- kontener, wewnątrz którego znajdować się będzie kwestionariusz -->
+    <h1 id="title" class="center">FreeCodeCamp Sample Survey Form</h1>
     <div id="survey-form">
-        <p id="description">Help us improve FreeCodeCamp.</p>
-        <form id="survey">
-            <div class="q-element">
-                <p class="test">Content of
-                    <pre>form</pre>.</p>
-                <label for="name">Enter the name:</label>
-                <input type="text" placeholder="Enter the name:">
+        <p id="description" class="center">Help us improve FCC!</p>
+        <form id="survey-form">
+            <!-- name -->
+            <div class="row">
+                <div class="left">
+                    <label for="name" id="name-label">Enter your name:</label>
+                </div>
+                <div class="right">
+                    <input class="input" type="text" id="name" name="name" placeholder="Enter your name" autofocus required>
+                </div>
             </div>
-            <div class="q-element">
-                <label for="email">Enter the email:</label>
-                <input type="email" placeholder="Enter the email:">
+            <!-- email -->
+            <div class="row">
+                <div class="left">
+                    <label for="email">Enter the email:</label>
+                </div>
+                <div class="right">
+                    <input class="input" type="email" placeholder="Enter the email:">
+                </div>
             </div>
-            <div class="q-element">
-                <label for="pickdate">Enter your birthday:</label>
-                <input type="date" id="pickdate" name="pickdate">
+            <!-- pickdate -->
+            <div class="row">
+                <div class="left">
+                    <label for="pickdate">Pick your birthday date:</label>
+                </div>
+                <div class="right">
+                    <input class="input" type="date" id="pickdate" name="pickdate">
+                </div>
             </div>
-            <div class="q-element">
-                <label for="dropdown">How did you manage to know about us?</label>
-                <select name="dropdown" id="dropdown">
-                    <option value="default" disabled>Choose an option...</option>
-                    <option value="friend">Friend told me</option>
-                    <option value="search-engine">Google told me</option>
-                    <option value="articles">Articles and publications</option>
-                    <option value="not-willing">I won't tell ya!</option>
-                </select>
+            <div class="row">
+                <div class="left">
+                    <label for="dropdown">How did you manage to know about us?</label>
+                </div>
+                <div class="right">
+                    <select name="dropdown" id="dropdown">
+                        <option value="default" disabled selected>Choose an option...</option>
+                        <option value="friend">Friend told me</option>
+                        <option value="search-engine">Google told me</option>
+                        <option value="articles">Articles and publications</option>
+                        <option value="not-willing">I won't tell ya!</option>
+                    </select>
+                </div>
             </div>
-            <div class="q-element">
-                <label for="number">How much time would you spend learning weekly? (hours)</label>
-                <input type="number" min="1" max="30">
+            <div class="row">
+                <div class="left">
+                    <label for="number">How much time would you spend learning weekly? (hours)</label>
+                </div>
+                <div class="right">
+                    <input class="input" type="number" min="1" max="40" maxlength="2" size="2">
+                </div>
             </div>
-            <div class="q-element">
-                <label>Are you satisfied with what you receive from FreeCodeCamp course?</label>
-                <ul class="wrap">
-                    <li>
-                        <input type="radio" id="radio-1" name="radio" value="1" checked>
-                        <label for="radio" class="radio-buttons">
-                            <strong>1</strong> - definitely not - I would choose another learning path.</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="radio-2" name="radio" value="2">
-                        <label for="radio" class="radio-buttons">
-                            <strong>2</strong> - rather not - there are many things to improve.</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="radio-3" name="radio" value="3">
-                        <label for="radio" class="radio-buttons">
-                            <strong>3</strong> - neither good, nor bad - it's okay.</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="radio-4" name="radio" value="4">
-                        <label for="radio" class="radio-buttons">
-                            <strong>4</strong> - rather yes - for its simplicity and affordability.</label>
-                    </li>
-                    <li>
-                        <input type="radio" id="radio-5" name="radio" value="5">
-                        <label for="radio" class="radio-buttons">
-                            <strong>5</strong> - definitely yes - I'll be an evangelist!.</label>
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="left">
+                    <label for="radio">Are you satisfied with what you receive from FreeCodeCamp course?</label>
+                </div>
+                <div class="right">
+                    <div class="input">
+                        <input type="radio" name="radio" value="1">I love it!
+                        <br>
+                        <input type="radio" name="radio" value="2">I like it
+                        <br>
+                        <input type="radio" name="radio" value="3">It's ok
+                        <br>
+                        <input type="radio" name="radio" value="4">Not really
+                        <br>
+                        <input type="radio" name="radio" value="4">Not really
+                        <br>
+                    </div>
+                </div>
             </div>
-            <div class="q-element">
-                <label>What technologies would you learn?</label>
-                <ul class="wrap">
-                    <li>
-                        <input type="checkbox" id="checkbox-1" name="checkbox" value="vue">
-                        <label for="checkbox" class="radio-buttons">Vue.js</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox-2" name="checkbox" value="angular">
-                        <label for="checkbox" class="radio-buttons">Angular</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox-3" name="checkbox" value="vanilla">
-                        <label for="checkbox" class="radio-buttons">Vanilla.js</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox-4" name="checkbox" value="oocss">
-                        <label for="checkbox" class="radio-buttons">OOCSS</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox-5" name="checkbox" value="cms">
-                        <label for="checkbox" class="radio-buttons">Content Management Systems</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="checkbox-6" name="checkbox" value="php">
-                        <label for="checkbox" class="radio-buttons">PHP</label>
-                    </li>
-                </ul>
-            </div>
-            
     </div>
     </form>
     </div>

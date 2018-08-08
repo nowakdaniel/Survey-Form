@@ -1,63 +1,50 @@
 body {
-    height: 100%;
-    width: 100%;
-    font-family: "Karla", sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
-p.test,
-pre {
-    display: inline;
-}
-
-pre {
-    color: crimson;
-}
-
-form {
-    box-sizing: border-box;
-    width: 50%;
-    margin: 0 auto;
+select {
+    font-family: inherit;
+    height: 35px;
+    left: 9px;
+    margin-top: 20px;
+    position: relative;
 }
 
 input,
 select {
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    font-family: "Karla", sans-serif;
-    width: 190px;
+    width: 200px;
 }
 
-label {
+input[type=number] {
+    width: 80px;
+}
+
+#survey-form {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.left {
     display: inline-block;
-    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: right;
+    vertical-align: middle;
+    width: 40%;
 }
 
-label[for=radio],
-label[for=checkbox] {
-    display: inline;
-    line-height: 25px;
+.right {
+    display: inline-block;
+    margin-left: 10px;
+    text-align: left;
+    width: 50%;
 }
 
-input[type=radio],
-input[type=checkbox] {
-    width: auto;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-.q-element {
-    position: relative;
-    margin: 7px 0 7px 0;
-}
-
-.wrap {
-    position: relative;
-    float: right;
-    margin-bottom: 35px;
+.input {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 12px;
+    margin: 10px 0 0 10px;
+    padding: 5px;
 }
