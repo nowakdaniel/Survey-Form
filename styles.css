@@ -1,28 +1,126 @@
 body {
     font-family: 'Karla', sans-serif;
+    background: linear-gradient(to bottom right, #c471e6, #ff5d4c);
 }
 
-select {
+button.reset {
+    background: #eeeeee;
+    border: 1px solid #D2D7D3;
+    border-radius: 10px;
+    padding: 12px 3em;
+    outline: none;
+}
+
+button.submit {
+    background: linear-gradient(to top right,#c471e6,#ff5d4c);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 12px 3em;
+    outline: none;
+}
+
+button {
     font-family: inherit;
-    height: 35px;
-    left: 9px;
-    margin-top: 20px;
-    position: relative;
 }
 
-input,
+button:active {
+    transform: translateY(2px);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 75px 0 35px 0;
+}
+input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
 select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background: url('img/arr_down.png') no-repeat 98% center;
+    border: 1px solid #eeeeee;
+    padding: 0px 5px;  
+    outline: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=date],
+select {
+    margin-top: 15px;
     box-sizing: border-box;
     width: 200px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+    display: inline-block;
+    text-align: left;
+    margin-top: 8px;
 }
 
 input[type=number] {
     width: 80px;
 }
 
+input[type=radio]:checked {
+    
+}
+
+select {
+    font-family: inherit;
+    height: 35px;
+    left: 9px;
+    position: relative;
+}
+
+textarea {
+    width: 85%;
+}
+
 #survey-form {
+    background: #fff;
+    box-shadow: 0px 0px 150px -40px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 150px -40px rgba(0,0,0,0.8);
+    -webkit-box-shadow: 0px 0px 150px -40px rgba(0,0,0,0.8);
     margin: 0 auto;
-    width: 75%;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+form > p.center {
+    margin-bottom: 45px;
+}
+
+.buttons {
+    margin: 30px 0 20px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.footer {
+    margin: 30px 0;
+}
+
+.input {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 14px;
+    margin: 10px 0 0 10px;
+    padding: 5px;
 }
 
 .left {
@@ -30,26 +128,21 @@ input[type=number] {
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: right;
-    vertical-align: middle;
-    width: 40%;
+    vertical-align: top;
+    width: 45%;
 }
 
 .right {
     display: inline-block;
     margin-left: 10px;
     text-align: left;
-    width: 50%;
+    width: 45%;
 }
 
-.input {
-    display: inline-block;
-    font-family: inherit;
-    font-size: 12px;
-    margin: 10px 0 0 10px;
-    padding: 5px;
+.row-checks {
+    margin: 25px 0;
 }
 
-input[type=radio] {
-    display: inline-block;
-    width: 100%;
+.white {
+    color: #fff;
 }
