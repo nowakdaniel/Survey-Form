@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Custom Survey Form">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
 </head>
-
 <body>
     <h1 id="title" class="center white">FreeCodeCamp Sample Survey Form</h1>
         <form id="survey-form">
@@ -26,10 +24,10 @@
         <!-- email -->
         <div class="row">
             <div class="left">
-                <label for="email">Enter the email:</label>
+                <label for="email" id="email-label">Enter the email:</label>
             </div>
             <div class="right">
-                <input class="input" type="email" placeholder="example@domain.com">
+                <input class="input" type="email" id="email" name="email" placeholder="example@domain.com">
             </div>
         </div>
         <!-- pickdate -->
@@ -57,17 +55,17 @@
         </div>
         <div class="row">
             <div class="left">
-                <label for="number">How much time would you spend learning weekly? (hours)</label>
+                <label for="number" id="number-label">How much time would you spend learning weekly? (hours)</label>
             </div>
             <div class="right">
-                <input class="input" type="number" min="1" max="40" maxlength="2" size="2">
+                <input class="input" id="number" type="number" min="1" max="40" placeholder="hours" required>
             </div>
         </div>
         <div class="row-checks">
             <div class="left">
                 <label for="radio">Are you satisfied with what you receive from FreeCodeCamp course?</label>
             </div>
-            <div class="right">
+            <div class="right" id="radio">
                 <input type="radio" name="radio" value="1" id="r1">
                 <label for="r1">
                     <strong>1</strong> - definitely not - I would choose another learning path.</label>
@@ -94,7 +92,7 @@
             <div class="left">
                 <label for="checkbox">What technologies that are unavailable here would you like to learn?</label>
             </div>
-            <div class="right">
+            <div class="right" id="checkbox">
                 <input type="checkbox" name="checkbox" value="vue" id="c1">
                 <label for="c1">Vue.js</label>
                 <br>
@@ -123,13 +121,12 @@
                 <textarea id="textarea" rows="7" cols="50" placeholder="Tell us here!"></textarea>
             </div>
         </div>
-        </div>
+
         <div class="buttons">
-            <button class="reset" type="reset">Reset</button>
-            <button class="submit" type="sumbit">Submit</button>
+            <button class="reset" type="reset" id="reset">Reset</button>
+            <button class="submit" type="sumbit" id="submit">Submit</button>
         </div>
     </form>
     <p class="center white footer"><strong>Note:</strong> This form is not collecting any personal data. It's made only for exercise purposes.</p>
 </body>
-
 </html>
